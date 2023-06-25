@@ -1,0 +1,63 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <title>Drowsiness Detection System</title>
+    <link rel="stylesheet" type="text/css" href=" {% static '/css/style.css' %} "> 
+</head>
+<body>
+    <nav>
+        <div class="contents">
+            <a href=""><img class="logo" src="/media/stayAwake.png" alt="logo"></a>
+            <div class="list">
+                <ul>
+                    <li>
+                        <a href="">Home</a>
+                        <a href="#">About</a>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="buttonContainer">
+                <button class="signIn">Sign In</button>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <div class="mainContents">
+            <div class="headerContents">
+                <div class="heading">
+                    <h1>Detect</h1>
+                    <h1>Drowsiness</h1>
+                    <h1 class="blue">In Real Time</h1>
+                </div>
+                <div class="paragraph">
+                    <p>stayAwake.ai is a project based on deep learning which detects whether you are drowsy or not in real time.</p>
+                </div>
+                <form action="{% url 'drowsy' %}">
+                    <div class="buttons">
+                        <button type="submit" class="detectRealTime">Real Time</button>
+                    </div>
+                </form>
+                <form action="{% url 'upload' %}" method="POST" enctype="multipart/form-data">
+                    <div class = "button2">
+                        {% csrf_token %}
+                        <label for="image">Select an image:</label>
+                        <input type="file" name="image" id="image">
+                        <br>
+                        <button class="detectRealTime" type="submit" value="Detect Drowsiness">Detect on Image</button>
+                    </div>
+                </form>
+            </div>
+            <img src="/media/landing.png" alt="Detection" class="detection">
+        </div>
+    </header>    
+</body>
+</html>

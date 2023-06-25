@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Satisfy&display=swap');
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        } 
+        
+        nav {
+            height: 70px;
+            background: yellow;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0rem calc((100vw - 1300px)/2);
+        } 
+
+        .logo {
+            color: black;
+            font-size: 40px;
+            font-family: Satisfy;
+            font-weight: bolder;
+            font-style: italic;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: black;
+            font-family: Open Sans;
+            padding: 15px
+        }
+
+        .hero {
+            background: #D3F3EE;
+        }
+
+        .hero-container {
+            display: grid;
+            height: 693px
+        }
+
+        .column-left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: black;
+            padding: 35px;
+        }
+
+        .column-left h1 {
+            font-family: Open Sans;
+            margin-bottom: 20px;
+            font-size: 40px
+        }
+
+        .column-left p {
+            font-family: Open Sans;
+            margin-bottom: 30px;
+            line-height: 1.5;
+            font-size: 20px
+        }
+
+        .column-right {
+            display: flex;
+            justify-content: center;
+            padding: 35px;
+        }
+
+        form .button1 {
+            margin: 50px 100px;
+        }
+
+        form .button1 input {
+            height: 80px;
+            width: 150px;
+            outline: none;
+            color: black;
+            font-family: Open Sans;
+            font-size: 15px
+        }
+
+        form label {
+            font-family: Open Sans;
+        }
+
+        form .button2 input {
+            font-family: Open Sans;
+            font-size: 15px
+        } 
+
+        form .button2 {
+            margin: 50px 100px;
+        }
+
+        .afteruploading {
+            display: flex;
+            font-family: Open Sans;
+        }
